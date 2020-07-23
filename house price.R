@@ -107,6 +107,7 @@ house<-house%>%mutate_if(is.character,as.factor)
 
 house<-as.h2o(house)
 
+
 pred2<-h2o.predict(best_family,newdata=house)
 
 check2<-h2o.performance(best_family,newdata = house)
